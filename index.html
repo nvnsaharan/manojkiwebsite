@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+		<title>Manoj Kumar</title>
+		<!-- Favicon-->
+		<link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+		<!-- Font Awesome icons (free version)-->
+		<script
+			src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+		<!-- Google fonts-->
+		<link
+			href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
+			rel="stylesheet"
+			type="text/css"
+		/>
+
+		<link href="css/default.css" rel="stylesheet" type="text/css" />
+		<!-- Core theme CSS (includes Bootstrap)-->
+		<link href="css/styles.css" rel="stylesheet" />
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+		></script>
+		<script type="text/javascript">
+			(function () {
+				emailjs.init('user_BqL0AZkOtVtYBrCCjXm7T');
+			})();
+		</script>
+		<script type="text/javascript">
+			window.onload = function () {
+				const toast = document.getElementById('toast');
+				let toastTimer;
+				const showToast = (msg) => {
+					toast.innerText = msg;
+					toast.style.zIndex = 100;
+					toast.style.transform = 'translate(-50%,100px)';
+					clearTimeout(toastTimer);
+					toastTimer = setTimeout(() => {
+						toast.style.transform = 'translate(-50%,0px)';
+						window.location.reload();
+					}, 5000);
+				};
+
+				document
+					.getElementById('contact-form')
+					.addEventListener('submit', function (event) {
+						event.preventDefault();
+						emailjs
+							.sendForm(
+								'service_o3581pr',
+								'template_ae8n9jn',
+								this
+							)
+							.then(
+								function () {
+									console.log('object');
+									showToast('THANKS !');
+								},
+								function (error) {
+									showToast('FAILED...');
+								}
+							);
+					});
+			};
+		</script>
+	</head>
+
+	<body id="page-top">
+		<!-- Navigation-->
+		<nav
+			class="
+				navbar navbar-expand-lg
+				bg-secondary
+				text-uppercase
+				fixed-top
+			"
+			id="mainNav"
+		>
+			<div class="container">
+				<a class="navbar-brand js-scroll-trigger" href="#page-top"
+					>Manoj</a
+				>
+				<button
+					class="
+						navbar-toggler navbar-toggler-right
+						text-uppercase
+						font-weight-bold
+						bg-primary
+						text-white
+						rounded
+					"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbarResponsive"
+					aria-controls="navbarResponsive"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					Menu
+					<i class="fas fa-bars"></i>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item mx-0 mx-lg-1">
+							<a
+								class="
+									nav-link
+									py-3
+									px-0 px-lg-3
+									rounded
+									js-scroll-trigger
+								"
+								href="#about"
+								>About</a
+							>
+						</li>
+						<li class="nav-item mx-0 mx-lg-1">
+							<a
+								class="
+									nav-link
+									py-3
+									px-0 px-lg-3
+									rounded
+									js-scroll-trigger
+								"
+								href="#exp"
+								>Experience</a
+							>
+						</li>
+						<li class="nav-item mx-0 mx-lg-1">
+							<a
+								class="
+									nav-link
+									py-3
+									px-0 px-lg-3
+									rounded
+									js-scroll-trigger
+								"
+								href="#portfolio"
+								>Projects</a
+							>
+						</li>
+						<li class="nav-item mx-0 mx-lg-1">
+							<a
+								class="
+									nav-link
+									py-3
+									px-0 px-lg-3
+									rounded
+									js-scroll-trigger
+								"
+								href="#skillchart"
+								>Stats</a
+							>
+						</li>
+						<li class="nav-item mx-0 mx-lg-1">
+							<a
+								class="
+									nav-link
+									py-3
+									px-0 px-lg-3
+									rounded
+									js-scroll-trigger
+								"
+								href="#cert"
+								>Certifications</a
+							>
+						</li>
+						<li class="nav-item mx-0 mx-lg-1">
+							<a
+								class="
+									nav-link
+									py-3
+									px-0 px-lg-3
+									rounded
+									js-scroll-trigger
+								"
+								href="#contact"
+								>Contact</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- Masthead-->
+		<header class="masthead bg-primary text-white text-center">
+			<div class="container d-flex align-items-center flex-column">
+				<!-- Masthead Avatar Image-->
+				<img
+					class="masthead-avatar rounded mb-5"
+					src="./images/manojavatar.png"
+					alt=""
+				/>
+				<!-- Masthead Heading-->
+				<h1 class="masthead-heading text-uppercase mb-0">
+					Manoj Kumar
+				</h1>
+				<!-- Icon Divider-->
+				<div class="divider-custom divider-light">
+					<div class="divider-custom-line"></div>
+					<div class="divider-custom-icon">
+						<i class="fas fa-star"></i>
+					</div>
+					<div class="divider-custom-line"></div>
+				</div>
+				<!-- Masthead Subheading-->
+				<p class="masthead-subheading font-weight-light mb-0">
+					Web Developer - ML Enthusiast
+				</p>
+			</div>
+		</header>
+		<!-- Portfolio Section-->
+		<!-- About Section-->
+		<section class="page-section mb-0" id="about">
+			<div class="container">
+				<!-- About Section Heading-->
+				<h2
+					class="
+						page-section-heading
+						text-center text-uppercase text-secondary
+					"
+				>
+					About
+				</h2>
+				<!-- Icon Divider-->
+				<div class="divider-custom">
+					<div class="divider-custom-line"></div>
+					<div class="divider-custom-icon">
+						<i class="fas fa-star"></i>
+					</div>
+					<div class="divider-custom-line"></div>
+				</div>
+				<!-- About Section Content-->
+				<div class="row">
+					<div class="col-lg-4 ml-auto">
+						<p class="lead">
+							I love to build things that make the world a safer
+							and easier place to live in. I believe in continuous
+							learning and challenge myself with new unique
+							problems.
+						</p>
+					</div>
+					<div class="col-lg-4 mr-auto">
+						<p class="lead">
+							I am proficient in C++, C, Python,SQL. I am fairly
+							active on Linkedin, Leetcode and Github.
+						</p>
+					</div>
+					<div class="col-lg-4 mr-auto">
+						<p class="lead">
+							More Pandas, Scikit-learn, Numpy, TensorFlow, Keras
+							and OpenCV projects in the making.
+						</p>
+					</div>
+				</div>
+				<br />
+				<h2
+					class="
+						page-section-heading
+						text-center text-uppercase text-secondary
+					"
+				>
+					Skills
+				</h2>
+				<!-- Icon Divider-->
+				<div class="divider-custom">
+					<div class="divider-custom-line"></div>
+					<div class="divider-custom-icon">
+						<i class="fas fa-star"></i>
+					</div>
+					<div class="divider-custom-line"></div>
+				</div>
+				<div
+					class="
+						row
+						col-xl-12
+						mx-auto
+						justify-content-between
+						align-items-center
+					"
+				>
+					<div class="mentor1">
+						<img
+							src="https://img.icons8.com/color/48/000000/bootstrap.png"
+						/>
+						Bootstrap
+					</div>
+					<div class="mentor1">
+						<img
+							src="https://img.icons8.com/dusk/64/000000/c-programming.png"
+						/>
+						C
+					</div>
+					<div class="mentor1">
+						<img
+							src="https://img.icons8.com/ios-filled/50/000000/c-plus-plus-logo.png"
+						/>
+						C++
+					</div>
+					<div class="mentor1">
+						<img
+							<img
+							src="https://img.icons8.com/material/48/000000/amazon-web-services.png"
+						/>
+						AWS
+					</div>
+					<div class="mentor1">
+						<img
+							src="https://img.icons8.com/dusk/64/000000/css3.png"
+						/>
+						CSS
+					</div>
+					<div class="mentor1">
+						<img
+							src="https://img.icons8.com/material-rounded/48/000000/django.png"
+						/>
+						Django
+					</div>
+					<div class="mentor1">
+						<img
+							src="https://img.icons8.com/dusk/64/000000/github.png"
+						/>
+						GitHub
+					</div>
+					<div class="mentor1">
+						<img
+							src="https://img.icons8.com/dusk/64/000000/html-5.png"
+						/>
+						HTML
+					</div>
+					<div class="mentor1">
+						<img
+							src="https://img.icons8.com/dusk/64/000000/javascript.png"
+						/>
+						JavaScript
+					</div>
+					<div class="mentor1">
+						<img
+							src="./images/lang/jupy.png"
+							alt=""
+							width="50px"
+							height="50px"
+						/>
+						Jupyter
+					</div>
+					<div class="mentor1">
+						<img
+							src="https://img.icons8.com/ultraviolet/40/000000/mysql.png"
+						/>
+						MySQL
+					</div>
+
+					<div class="mentor1">
+						<img
+							src="https://img.icons8.com/dusk/64/000000/python.png"
+						/>
+						Python
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="page-section bg-primary text-white mb-0" id="exp">
+			<div class="container">
+				<!-- About Section Heading-->
+				<h2
+					class="
+						page-section-heading
+						text-center text-uppercase text-white
+					"
+				>
+					Experience
+				</h2>
+				<!-- Icon Divider-->
+				<div class="divider-custom divider-light">
+					<div class="divider-custom-line"></div>
+					<div class="divider-custom-icon">
+						<i class="fas fa-star"></i>
+					</div>
+					<div class="divider-custom-line"></div>
+				</div>
+				<!-- About Section Content-->
+				<div class="row justify-content-start align-items-center">
+					<div class="lead-1">
+						<h5>
+							💻 <i><b>Data Scientist</b>: Climate Connect</i>
+						</h5>
+						<h7 class="lead"><i>Dec 2020 - April 2021</i></h7>
+						<h6 class="lead">
+							<ul>
+								<li>
+									Utilized python to implement supervised
+									machine learning techniques for time series
+									load forecasting on previous 10 years of
+									data, which reduced total MAPE to 0.76.
+								</li>
+								<li>
+									The project involves a machine learning
+									model to predict load based on previous load
+									and forecasted weather conditions.
+								</li>
+								<li>
+									Played Data Scientist role in the project
+									using Neural Nets and boosting algorithms.
+								</li>
+								<li>
+									Presented results to the team's head and
+									wrote requested executive summary detailing
+									value proposition and strategy to present to
+									end clients and senior leadership.
+								</li>
+							</ul>
+						</h6>
+					</div>
+
+					<div class="lead-1">
+						<h5>
+							⚡ <i><b>Research Intern</b>: NIT Trichy</i>
+						</h5>
+						<h7 class="lead"><i>Dec 2019 - Dec 2020</i></h7>
+						<h6 class="lead">
+							Work on image processing and a computer vision model
+							to automatically correct and grade Handwritten
+							Mathematical Answer Sheets
+						</h6>
+					</div>
+					<div class="lead-1">
+						<h5>
+							🧩
+							<i
+								><b>Organizer, Events Team</b>: Pragyan, NIT
+								Trichy</i
+							>
+						</h5>
+						<h6 class="lead">
+							The Events team brings to Pragyan a wide range of
+							thought-provoking events. The members utilize
+							forward-thinking abilities in a bid to make the
+							proceedings at Pragyan inspiring and insightful for
+							attendees.
+						</h6>
+					</div>
+					<div class="lead-1">
+						<h5>
+							✍️
+							<i
+								><b
+									>Coordinator, Public Relations and
+									Hospitality Team</b
+								>: Festember, NIT Trichy</i
+							>
+						</h5>
+						<h6 class="lead">
+							Festember, the annual cultural fest of NIT Trichy &
+							worked as a coordinator in Public Relations and
+							Hospitality Team. As a part of the Guest House team
+							the work specifically involved in the arrangement of
+							various requirements for guests.
+						</h6>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="page-section portfolio" id="portfolio">
+			<div class="container">
+				<!-- Portfolio Section Heading-->
+				<h2
+					class="
+						page-section-heading
+						text-center text-uppercase text-secondary
+						mb-0
+					"
+				>
+					Projects
+				</h2>
+				<!-- Icon Divider-->
+				<div class="divider-custom">
+					<div class="divider-custom-line"></div>
+					<div class="divider-custom-icon">
+						<i class="fas fa-star"></i>
+					</div>
+					<div class="divider-custom-line"></div>
+				</div>
+				<!-- Portfolio Grid Items-->
+
+				<div
+					class="
+						row
+						align-items-center align-self-center
+						portfolio_items
+					"
+				>
+					<div class="col-md-4 col-lg-4 mb-3 mb-md-0">
+						<div
+							class="portfolio-item mx-3"
+							data-toggle="modal"
+							data-target="#portfolioModal19"
+						>
+							<div
+								class="
+									portfolio-item-caption
+									d-flex
+									align-items-center
+									justify-content-center
+									h-100
+									w-100
+								"
+							>
+								<div
+									class="
+										portfolio-item-caption-content
+										text-center text-white
+									"
+								>
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img
+								class="img-fluid rounded mb-5"
+								src="./images/motivbot.png"
+								alt=""
+								height="300px"
+								width="300px"
+							/>
+						</div>
+					</div>
+
+					<div class="col-md-4 col-lg-4 mb-3 mb-md-0">
+						<div
+							class="portfolio-item mx-3"
+							data-toggle="modal"
+							data-target="#portfolioModal10"
+						>
+							<div
+								class="
+									portfolio-item-caption
+									d-flex
+									align-items-center
+									justify-content-center
+									h-100
+									w-100
+								"
+							>
+								<div
+									class="
+										portfolio-item-caption-content
+										text-center text-white
+									"
+								>
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img
+								class="img-fluid rounded mb-5"
+								src="./images/asl.jpg"
+								alt=""
+								height="300px"
+								width="300px"
+							/>
+						</div>
+					</div>
+
+					<div class="col-md-4 col-lg-4 mb-3 mb-md-0">
+						<div
+							class="portfolio-item mx-3"
+							data-toggle="modal"
+							data-target="#portfolioModal8"
+						>
+							<div
+								class="
+									portfolio-item-caption
+									d-flex
+									align-items-center
+									justify-content-center
+									h-100
+									w-100
+								"
+							>
+								<div
+									class="
+										portfolio-item-caption-content
+										text-center text-white
+									"
+								>
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img
+								class="img-fluid rounded mb-5"
+								src="./images/hand.svg"
+								alt=""
+								height="300px"
+								width="300px"
+							/>
+						</div>
+					</div>
+					<div class="col-md-4 col-lg-4 mb-3 mb-md-0">
+						<div
+							class="portfolio-item mx-3"
+							data-toggle="modal"
+							data-target="#portfolioModal7"
+						>
+							<div
+								class="
+									portfolio-item-caption
+									d-flex
+									align-items-center
+									justify-content-center
+									h-100
+									w-100
+								"
+							>
+								<div
+									class="
+										portfolio-item-caption-content
+										text-center text-white
+									"
+								>
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img
+								class="img-fluid rounded mb-5"
+								src="./images/ai.svg"
+								alt=""
+								height="300px"
+								width="300px"
+							/>
+						</div>
+					</div>
+					<div class="col-md-4 col-lg-4 mb-3 mb-md-0">
+						<div
+							class="portfolio-item mx-3"
+							data-toggle="modal"
+							data-target="#portfolioModal6"
+						>
+							<div
+								class="
+									portfolio-item-caption
+									d-flex
+									align-items-center
+									justify-content-center
+									h-100
+									w-100
+								"
+							>
+								<div
+									class="
+										portfolio-item-caption-content
+										text-center text-white
+									"
+								>
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img
+								class="img-fluid rounded mb-5"
+								src="./images/task.svg"
+								alt=""
+								height="300px"
+								width="300px"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="page-section bg-primary text-white" id="skillchart">
+			<div class="container">
+				<!-- Contact Section Heading-->
+				<h2
+					class="page-section-heading text-center text-uppercase mb-0"
+				>
+					Dev Stats
+				</h2>
+				<!-- Icon Divider-->
+				<div class="divider-custom divider-light">
+					<div class="divider-custom-line"></div>
+					<div class="divider-custom-icon">
+						<i class="fas fa-star"></i>
+					</div>
+					<div class="divider-custom-line"></div>
+				</div>
+				<!-- Contact Section Form-->
+				<div>
+					<div id="skills-content">
+						<div class="row" id="skill_diagram">
+							<div id="content">
+								<div class="legend">
+									<h1>Skills:</h1>
+									<div class="skills">
+										<ul>
+											<li class="rjs">C++</li>
+											<li class="py">Python</li>
+											<li class="jq">MySQL</li>
+											<li class="css">Django</li>
+											<li class="html">TensorFlow</li>
+											<li class="uiux">Keras</li>
+											<li class="sql">Jupyter</li>
+										</ul>
+									</div>
+								</div>
+								<div id="diagram"></div>
+							</div>
+
+							<div class="get">
+								<div class="arc">
+									<span class="text">C++</span>
+									<input
+										type="hidden"
+										class="percent"
+										value="90"
+									/>
+									<input
+										type="hidden"
+										class="color"
+										value="#9400d3"
+									/>
+								</div>
+								<div class="arc">
+									<span class="text">Python</span>
+									<input
+										type="hidden"
+										class="percent"
+										value="90"
+									/>
+									<input
+										type="hidden"
+										class="color"
+										value="#4b0082"
+									/>
+								</div>
+								<div class="arc">
+									<span class="text">MySQL</span>
+									<input
+										type="hidden"
+										class="percent"
+										value="85"
+									/>
+									<input
+										type="hidden"
+										class="color"
+										value="#0000ff"
+									/>
+								</div>
+								<div class="arc">
+									<span class="text">Django</span>
+									<input
+										type="hidden"
+										class="percent"
+										value="85"
+									/>
+									<input
+										type="hidden"
+										class="color"
+										value="#00ff00"
+									/>
+								</div>
+								<div class="arc">
+									<span class="text">TensorFlow</span>
+									<input
+										type="hidden"
+										class="percent"
+										value="80"
+									/>
+									<input
+										type="hidden"
+										class="color"
+										value="#ffff00"
+									/>
+								</div>
+								<div class="arc">
+									<span class="text">Keras</span>
+									<input
+										type="hidden"
+										class="percent"
+										value="80"
+									/>
+									<input
+										type="hidden"
+										class="color"
+										value="#ff7f00"
+									/>
+								</div>
+								<div class="arc">
+									<span class="text">Jupyter</span>
+									<input
+										type="hidden"
+										class="percent"
+										value="75"
+									/>
+									<input
+										type="hidden"
+										class="color"
+										value="#ff0000"
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="page-section" style="background-color: #fff" id="cert">
+			<div class="container">
+				<!-- Contact Section Heading-->
+				<h2
+					class="page-section-heading text-center text-uppercase mb-0"
+				>
+					Certifications and Resume
+				</h2>
+				<!-- Icon Divider-->
+				<div class="divider-custom">
+					<div class="divider-custom-line"></div>
+					<div class="divider-custom-icon">
+						<i class="fas fa-star"></i>
+					</div>
+					<div class="divider-custom-line"></div>
+				</div>
+				<!-- Contact Section Form-->
+				<div class="row">
+					<div class="col-xl-10 mx-auto lead-2 lead">
+						<h6>
+							<ul>
+								<li class="cli">
+									Machine Learning (Stanford University)
+								</li>
+								<li class="cli">
+									Deep Learning Specialization, AI for
+									everyone and Introduction to TensorFlow for
+									Artificial Intelligence, Machine Learning,
+									and Deep Learning (deeplearning.ai)
+								</li>
+								<li class="cli">
+									Getting Started with AWS Machine Learning
+									(Amazon)
+								</li>
+								<li class="cli">
+									Linear Algebra and Differential Equations
+									and Calculus
+								</li>
+								<li class="cli">
+									Data Structures and Algorithms
+								</li>
+								<li class="cli">Operating System</li>
+								<li class="cli">Big Data Analytics</li>
+								<li class="cli">Network Security</li>
+								<li class="cli">Database Management System</li>
+								<li class="cli">
+									Technical Support Fundamentals, The Bits and
+									Bytes of Computer Networking, Operating
+									Systems and You: Becoming a Power User,
+									Crash Course in Python (Google)
+								</li>
+							</ul>
+						</h6>
+						<center>
+							<a
+								class="btn btn-secondary resume_btn"
+								target="_blank"
+								href="./Resume.pdf"
+								download="Resume.pdf"
+								>RESUME</a
+							>
+						</center>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact Section-->
+		<section class="page-section bg-primary text-white" id="contact">
+			<div id="toast">Blah Blah</div>
+			<div class="container">
+				<!-- Contact Section Heading-->
+				<h2
+					class="page-section-heading text-center text-uppercase mb-0"
+				>
+					Contact Me
+				</h2>
+				<!-- Icon Divider-->
+				<div class="divider-custom divider-light">
+					<div class="divider-custom-line"></div>
+					<div class="divider-custom-icon">
+						<i class="fas fa-star"></i>
+					</div>
+					<div class="divider-custom-line"></div>
+				</div>
+				<!-- Contact Section Form-->
+				<div class="row">
+					<div class="col-lg-8 mx-auto">
+						<!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
+						<form id="contact-form" name="sentMessage">
+							<div class="control-group">
+								<div
+									class="
+										form-group
+										floating-label-form-group
+										controls
+										mb-0
+										pb-2
+									"
+								>
+									<label>Name</label>
+									<input
+										style="
+											color: white;
+											background-color: transparent;
+										"
+										class="form-control"
+										id="name"
+										name="user_name"
+										type="text"
+										placeholder="Name"
+										required
+										data-validation-required-message="Please enter your name."
+									/>
+									<p class="help-block text-danger"></p>
+								</div>
+							</div>
+							<div class="control-group">
+								<div
+									class="
+										form-group
+										floating-label-form-group
+										controls
+										mb-0
+										pb-2
+									"
+								>
+									<label>Email Address</label>
+									<input
+										style="
+											color: white;
+											background-color: transparent;
+										"
+										class="form-control"
+										id="email"
+										name="user_email"
+										type="email"
+										placeholder="Email Address"
+										required="required"
+										data-validation-required-message="Please enter your email address."
+									/>
+									<p class="help-block text-danger"></p>
+								</div>
+							</div>
+							<div class="control-group">
+								<div
+									class="
+										form-group
+										floating-label-form-group
+										controls
+										mb-0
+										pb-2
+									"
+								>
+									<label>Phone Number</label>
+									<input
+										style="
+											color: white;
+											background-color: transparent;
+										"
+										class="form-control"
+										id="phone"
+										type="tel"
+										name="user_number"
+										placeholder="Phone Number"
+										required="required"
+										data-validation-required-message="Please enter your phone number."
+									/>
+									<p class="help-block text-danger"></p>
+								</div>
+							</div>
+							<div class="control-group">
+								<div
+									class="
+										form-group
+										floating-label-form-group
+										controls
+										mb-0
+										pb-2
+									"
+								>
+									<label>Message</label>
+									<textarea
+										style="
+											color: white;
+											background-color: transparent;
+										"
+										class="form-control"
+										id="message"
+										name="message"
+										rows="5"
+										placeholder="Message"
+										required="required"
+										data-validation-required-message="Please enter a message."
+									></textarea>
+									<p class="help-block text-danger"></p>
+								</div>
+							</div>
+							<br />
+							<div id="success"></div>
+							<div class="form-group">
+								<button
+									class="btn btn-secondary btn-xl"
+									id="button"
+									type="submit"
+								>
+									Send
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer-->
+		<footer class="footer text-center">
+			<div class="container justify-content-center">
+				<!-- Footer Location-->
+				<div>
+					<h4 class="text-uppercase mb-4">Connect with me</h4>
+					<a
+						class="btn btn-outline-light btn-social mx-1"
+						href="https://github.com/manojxk"
+						><i class="fab fa-fw fa-github"></i
+					></a>
+					<a
+						class="btn btn-outline-light btn-social mx-1"
+						href="https://www.hackerrank.com/manojkumarsaran1"
+						><i class="fab fa-fw fa-hackerrank"></i
+					></a>
+					<a
+						class="btn btn-outline-light btn-social mx-1"
+						href="https://leetcode.com/manojkumar47/"
+						><span
+							class="iconify"
+							data-icon="simple-icons:leetcode"
+							data-inline="false"
+						></span
+					></a>
+					<a
+						class="btn btn-outline-light btn-social mx-1"
+						href="https://www.facebook.com/manojkumarsaranofficial"
+						><i class="fab fa-fw fa-facebook-f"></i
+					></a>
+					<a
+						class="btn btn-outline-light btn-social mx-1"
+						href="https://twitter.com/manojkumar9801"
+						><i class="fab fa-fw fa-twitter"></i
+					></a>
+					<a
+						class="btn btn-outline-light btn-social mx-1"
+						href="https://www.linkedin.com/in/manojkumarsaran/"
+						><i class="fab fa-fw fa-linkedin-in"></i
+					></a>
+					<a
+						class="btn btn-outline-light btn-social mx-1"
+						href="https://www.instagram.com/just.manojxk/"
+						><i class="fab fa-fw fa-instagram"></i
+					></a>
+				</div>
+			</div>
+		</footer>
+		<!-- Copyright Section-->
+		<div class="copyright py-4 text-center text-white">
+			<div class="container">
+				<small>Copyright © Manoj Kumar 2021</small>
+			</div>
+		</div>
+		<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+		<div class="scroll-to-top d-lg-none position-fixed">
+			<a
+				class="js-scroll-trigger d-block text-center text-white rounded"
+				href="#page-top"
+				><i class="fa fa-chevron-up"></i
+			></a>
+		</div>
+		<!-- Portfolio Modals-->
+		<!-- Portfolio Modal 1-->
+
+		<div
+			class="portfolio-modal modal fade"
+			id="portfolioModal6"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="portfolioModal6Label"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<button
+						class="close"
+						type="button"
+						data-dismiss="modal"
+						aria-label="Close"
+					>
+						<span aria-hidden="true"
+							><i class="fas fa-times"></i
+						></span>
+					</button>
+					<div class="modal-body text-center">
+						<div class="container">
+							<div class="row justify-content-center">
+								<div class="col-lg-8">
+									<!-- Portfolio Modal - Title-->
+									<h2
+										class="
+											portfolio-modal-title
+											text-secondary text-uppercase
+											mb-0
+										"
+										id="portfolioModal6Label"
+									>
+										Reminder application program
+									</h2>
+									<!-- Icon Divider-->
+									<div class="divider-custom">
+										<div class="divider-custom-line"></div>
+										<div class="divider-custom-icon">
+											<i class="fas fa-star"></i>
+										</div>
+										<div class="divider-custom-line"></div>
+									</div>
+									<!-- Portfolio Modal - Image-->
+									<img
+										class="img-fluid rounded mb-5"
+										src="./images/task.svg"
+										alt=""
+									/>
+									<!-- Portfolio Modal - Text-->
+									<p class="mb-5">
+										This project is similar to a To-Do List,
+										where we have a set of goals to achieve.
+										And the reminder app will constantly
+										notify us about the various tasks we
+										need to do and actions to complete
+										throughout the course of the day.
+										<br />
+									</p>
+									<button
+										class="btn btn-primary"
+										data-dismiss="modal"
+									>
+										<i class="fas fa-times fa-fw"></i>
+										Close Window
+									</button>
+									<a
+										class="btn btn-primary"
+										href="https://github.com/manojxk/Reminder-application-program"
+										target="_blank"
+										>GitHub Repo</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="portfolio-modal modal fade"
+			id="portfolioModal7"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="portfolioModal7Label"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<button
+						class="close"
+						type="button"
+						data-dismiss="modal"
+						aria-label="Close"
+					>
+						<span aria-hidden="true"
+							><i class="fas fa-times"></i
+						></span>
+					</button>
+					<div class="modal-body text-center">
+						<div class="container">
+							<div class="row justify-content-center">
+								<div class="col-lg-8">
+									<!-- Portfolio Modal - Title-->
+									<h2
+										class="
+											portfolio-modal-title
+											text-secondary text-uppercase
+											mb-0
+										"
+										id="portfolioModal7Label"
+									>
+										Applied Machine Learning Projects:
+										<br />
+										Regression, <br />Image Recognition, and
+										<br />
+										Text Sentiment Prediction
+									</h2>
+									<!-- Icon Divider-->
+									<div class="divider-custom">
+										<div class="divider-custom-line"></div>
+										<div class="divider-custom-icon">
+											<i class="fas fa-star"></i>
+										</div>
+										<div class="divider-custom-line"></div>
+									</div>
+									<!-- Portfolio Modal - Image-->
+									<img
+										class="img-fluid rounded mb-5"
+										src="./images/ai.svg"
+										alt=""
+									/>
+									<!-- Portfolio Modal - Text-->
+									<p
+										class="mb-5"
+										style="
+											margin-bottom: 5px !important;
+											font-weight: 600 !important;
+										"
+									>
+										Worked on three distinct projects
+										focussing on three major domains in
+										applied machine learning as described:
+									</p>
+									<p
+										class="mb-5"
+										style="margin-bottom: 5px !important"
+									>
+										1. Comparative prediction of house price
+										using Linear Regression, LassoCV,
+										ElasticNet, RidgeCV, and XGBoost. Used
+										the 'House Sales in King Country, USA
+										dataset' to train the models. XGBoost
+										was found to be the most effective with
+										the least error.
+									</p>
+									<p
+										class="mb-5"
+										style="margin-bottom: 5px !important"
+									>
+										2. CNNs for sign language recognition
+										from hand gestures. Used the 'Sign
+										Language MNIST Dataset' for training a
+										neural network to recognize the English
+										alphabet corresponding to various
+										hand-made gestures in sign language. The
+										base model achieved an accuracy of
+										99.60%.
+									</p>
+									<p class="mb-5">
+										3. Comparative text emotion detection
+										using Naive Bayes, Linear SVM, Logistic
+										Regression, and Random Forest models.
+										Applied various NLP techniques on a
+										labeled Twitter tweets dataset and
+										trained models for recognizing if a
+										tweet represents a happy or a sad
+										emotion. The linear SVM model was found
+										to achieve the highest accuracy.
+									</p>
+									<button
+										class="btn btn-primary"
+										data-dismiss="modal"
+									>
+										<i class="fas fa-times fa-fw"></i>
+										Close Window
+									</button>
+									<a
+										class="btn btn-primary"
+										href="https://github.com/manojxk/Applied-Machine-Learning-Projects-Regression-Image-Recognition-and-Text-Sentiment-Prediction"
+										target="_blank"
+										>GitHub Repo</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="portfolio-modal modal fade"
+			id="portfolioModal8"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="portfolioModal8Label"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<button
+						class="close"
+						type="button"
+						data-dismiss="modal"
+						aria-label="Close"
+					>
+						<span aria-hidden="true"
+							><i class="fas fa-times"></i
+						></span>
+					</button>
+					<div class="modal-body text-center">
+						<div class="container">
+							<div class="row justify-content-center">
+								<div class="col-lg-8">
+									<!-- Portfolio Modal - Title-->
+									<h2
+										class="
+											portfolio-modal-title
+											text-secondary text-uppercase
+											mb-0
+										"
+										id="portfolioModal8Label"
+									>
+										Spellchecker
+									</h2>
+									<!-- Icon Divider-->
+									<div class="divider-custom">
+										<div class="divider-custom-line"></div>
+										<div class="divider-custom-icon">
+											<i class="fas fa-star"></i>
+										</div>
+										<div class="divider-custom-line"></div>
+									</div>
+									<!-- Portfolio Modal - Image-->
+									<img
+										class="img-fluid rounded mb-5"
+										src="./images/hand.svg"
+										alt=""
+									/>
+									<!-- Portfolio Modal - Text-->
+
+									<ul class="mb-5" style="list-style: none">
+										<li>
+											Deterministic spellchecker
+											implemented with a prefix tree(trie)
+										</li>
+										<li>
+											Check if the word is present in the
+											dictionary
+										</li>
+									</ul>
+									<br />
+
+									<button
+										class="btn btn-primary"
+										data-dismiss="modal"
+									>
+										<i class="fas fa-times fa-fw"></i>
+										Close Window
+									</button>
+									<a
+										class="btn btn-primary"
+										href="https://github.com/manojxk/Spell-checker"
+										>GitHub Repo</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="portfolio-modal modal fade"
+			id="portfolioModal10"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="portfolioModal10Label"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<button
+						class="close"
+						type="button"
+						data-dismiss="modal"
+						aria-label="Close"
+					>
+						<span aria-hidden="true"
+							><i class="fas fa-times"></i
+						></span>
+					</button>
+					<div class="modal-body text-center">
+						<div class="container">
+							<div class="row justify-content-center">
+								<div class="col-lg-8">
+									<!-- Portfolio Modal - Title-->
+									<h2
+										class="
+											portfolio-modal-title
+											text-secondary text-uppercase
+											mb-0
+										"
+										id="portfolioModal10Label"
+									>
+										Human Emotion and Gesture Detector Using
+										Deep Learning
+									</h2>
+									<!-- Icon Divider-->
+									<div class="divider-custom">
+										<div class="divider-custom-line"></div>
+										<div class="divider-custom-icon">
+											<i class="fas fa-star"></i>
+										</div>
+										<div class="divider-custom-line"></div>
+									</div>
+									<!-- Portfolio Modal - Image-->
+									<img
+										class="img-fluid rounded mb-5"
+										src="./images/asl.jpg"
+										alt=""
+									/>
+									<!-- Portfolio Modal - Text-->
+									<p
+										class="mb-5"
+										style="margin-bottom: 0px !important"
+									>
+										The emotions model will be built using
+										convolution neural networks from scratch
+										and for finger gestures, I used transfer
+										learning with VGG-16 architecture and
+										adding custom layers to improve the
+										performance of the model to get better
+										and higher accuracy.
+									</p>
+									<p class="mb-5">
+										Achieved a validation accuracy of 50%
+										for emotions model-1, over 65% for
+										emotions model-2, and a validation
+										accuracy of over 90% for the gestures
+										model.
+
+										<br />
+									</p>
+									<button
+										class="btn btn-primary"
+										data-dismiss="modal"
+									>
+										<i class="fas fa-times fa-fw"></i>
+										Close Window
+									</button>
+									<a
+										class="btn btn-primary"
+										href="https://github.com/manojxk/Human-Emotion-and-Gesture-Detector"
+										target="_blank"
+										>GitHub Repo</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="portfolio-modal modal fade"
+			id="portfolioModal19"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="portfolioModal19Label"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<button
+						class="close"
+						type="button"
+						data-dismiss="modal"
+						aria-label="Close"
+					>
+						<span aria-hidden="true"
+							><i class="fas fa-times"></i
+						></span>
+					</button>
+					<div class="modal-body text-center">
+						<div class="container">
+							<div class="row justify-content-center">
+								<div class="col-lg-8">
+									<!-- Portfolio Modal - Title-->
+									<h2
+										class="
+											portfolio-modal-title
+											text-secondary text-uppercase
+											mb-0
+										"
+										id="portfolioModal19Label"
+									>
+										Compression using Huffman encoding
+									</h2>
+									<!-- Icon Divider-->
+									<div class="divider-custom">
+										<div class="divider-custom-line"></div>
+										<div class="divider-custom-icon">
+											<i class="fas fa-star"></i>
+										</div>
+										<div class="divider-custom-line"></div>
+									</div>
+									<img
+										class="img-fluid rounded mb-5"
+										src="./images/motivbot.png"
+										alt=""
+									/>
+									<!-- Portfolio Modal - Text-->
+									<p class="mb-5">
+										Created a python module to compress and
+										decompress text files using Huffman
+										encoding/decoding.
+										<br />
+									</p>
+									<button
+										class="btn btn-primary"
+										data-dismiss="modal"
+									>
+										<i class="fas fa-times fa-fw"></i>
+										Close Window
+									</button>
+									<a
+										class="btn btn-primary"
+										href="hhttps://github.com/manojxk/Huffman-Coding"
+										target="_blank"
+										>GitHub Repo</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Bootstrap core JS-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<!-- replace x.x.x with actual version -->
+		<script src="https://unpkg.com/@codersrank/skills-chart@0.9.19/codersrank-skills-chart.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+		<!-- Third party plugin JS-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+		<!-- Core theme JS-->
+		<script src="js/scripts.js"></script>
+		<script src="js/jquery.js" type="text/javascript"></script>
+		<script src="js/raphael.js" type="text/javascript"></script>
+		<script src="js/init.js" type="text/javascript"></script>
+	</body>
+</html>
